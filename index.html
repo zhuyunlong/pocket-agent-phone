@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PocketAgent · 手机 AI 生活代理</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">AI Agent × 手机端自动化</p>
+        <h1>PocketAgent<br/>你的手机任务执行官</h1>
+        <p class="subtitle">
+          一句话描述需求，多 Agent 协作自动拆解日程、出行、付款提醒等跨 App 任务，生成带安全确认的可执行计划。
+        </p>
+        <div class="metrics">
+          <div><strong>92%</strong><span>意图识别准确率</span></div>
+          <div><strong>1.8s</strong><span>平均规划响应</span></div>
+          <div><strong>35%</strong><span>操作步骤节省</span></div>
+        </div>
+        <button id="randomTaskBtn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1.5 8a6.5 6.5 0 0 1 11.48-4.17M14.5 8a6.5 6.5 0 0 1-11.48 4.17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M13 1v3.5h-3.5M3 15v-3.5h3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          换一个手机任务
+        </button>
+      </div>
+
+      <div class="phone" aria-label="手机 AI Agent 界面演示">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="status-bar"><span>9:41</span><span>5G ◉</span></div>
+          <div class="app-header">
+            <div class="avatar">AI</div>
+            <div>
+              <h2>PocketAgent</h2>
+              <p id="agentStatus">多 Agent 正在协作</p>
+            </div>
+          </div>
+          <div class="task-card" id="taskCard">
+            <p class="label">🎯 用户输入</p>
+            <p id="taskText">今晚 7 点和朋友吃饭，帮我安排路线、提醒和预算。</p>
+          </div>
+          <div class="agent-list" id="agentList"></div>
+          <div class="plan-card" id="planCard">
+            <p class="label">📋 执行计划</p>
+            <ol id="planList"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="logic">
+      <h2>核心逻辑流</h2>
+      <div class="flow">
+        <article>
+          <div class="flow-icon">🧠</div>
+          <b>意图解析 Agent</b>
+          <span>识别用户在手机场景中的真实目标、时间和约束条件。</span>
+        </article>
+        <article>
+          <div class="flow-icon">📐</div>
+          <b>任务规划 Agent</b>
+          <span>拆分子任务，决定执行顺序，估算 Token 预算。</span>
+        </article>
+        <article>
+          <div class="flow-icon">📱</div>
+          <b>App 工具 Agent</b>
+          <span>调用地图、日历、备忘录、支付、消息等手机能力。</span>
+        </article>
+        <article>
+          <div class="flow-icon">🛡️</div>
+          <b>风险校验 Agent</b>
+          <span>在付款、发消息、下单前触发确认，避免误操作。</span>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>PocketAgent Demo · 多 Agent 手机任务协作概念验证</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
