@@ -4,7 +4,20 @@
 
 ## 在线预览
 
-直接在浏览器中打开 `index.html` 即可体验。
+推荐使用本地静态服务预览，避免 `file://` 方式下 CSS/JS 被浏览器拦截：
+
+```bash
+./start-preview.command
+```
+
+脚本会启动本地服务并自动打开浏览器到 `http://127.0.0.1:8123/`。
+服务会在当前 Terminal 窗口保持运行，按 `Ctrl+C` 可停止。
+
+如果只想看它将执行什么命令：
+
+```bash
+./start-preview.command --dry-run
+```
 
 ## 核心逻辑流
 
